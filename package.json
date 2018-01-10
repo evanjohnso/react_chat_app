@@ -20,10 +20,7 @@
   },
   "proxy": "http://localhost:3001/",
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
+    "src/**/*.{js,jsx,json,css}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "husky": "^0.14.3",

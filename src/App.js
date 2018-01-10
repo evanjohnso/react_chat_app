@@ -1,25 +1,21 @@
 import React, { Component } from "react";
-
+import openSocket from "socket.io-client";
 import "./App.css";
 
 class App extends Component {
   state = { users: [] };
 
-  componentWillMount() {
-    // let socket =
-  }
-
   componentDidMount() {
-    fetch("/users")
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
+    openSocket("http://localhost:3456");
+    // fetch("/users")
+    //   .then(res => res.json())
+    //   .then(users => this.setState({ users }));
   }
   render() {
-    console.log(this.state.users);
     return (
       <div className="App">
         <h1>Users</h1>
-        {this.state.users.map(user => <div key={user.id}>{user.username}</div>)}
+        <h3>SUP</h3>
       </div>
     );
   }
