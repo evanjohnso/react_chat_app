@@ -17,6 +17,7 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
+  "proxy": "http://localhost:3001/",
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --write",
