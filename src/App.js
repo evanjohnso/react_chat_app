@@ -4,12 +4,11 @@ import "./App.css";
 
 class App extends Component {
   state = { users: [] };
+  socket;
 
   componentDidMount() {
-    openSocket("http://localhost:3456");
-    // fetch("/users")
-    //   .then(res => res.json())
-    //   .then(users => this.setState({ users }));
+    this.socket = openSocket("http://localhost:3456");
+    this.socket.on("news", data => console.log(data.hello));
   }
   render() {
     return (
