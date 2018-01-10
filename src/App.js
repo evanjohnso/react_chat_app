@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+
 import "./App.css";
 
 class App extends Component {
   state = { users: [] };
+
+  componentWillMount() {
+    // let socket =
+  }
 
   componentDidMount() {
     fetch("/users")
